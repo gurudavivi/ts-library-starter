@@ -1,0 +1,72 @@
+{
+  "name": "@guru/cli",
+  "description": "@guru/cli",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": "https://github.com/gurudavivi/guru/packages/cli",
+  "homepage": "https://github.com/gurudavivi/guru/packages/cli#readme",
+  "bugs": "https://github.com/gurudavivi/guru/issues",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "!*.map"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=14.19"
+  },
+  "scripts": {
+    "_test": "jest",
+    "build": "tsc --build",
+    "clean": "rimraf node_modules lib",
+    "compile": "tsc --build && pnpm run lint --fix",
+    "lint": "eslint src/**/*.ts test/**/*.ts",
+    "start": "tsc --watch",
+    "test": "pnpm run compile && pnpm run _test",
+    "test:cov": "jest --coverage"
+  },
+  "dependencies": {
+    "ansi-colors": "^4.1.1",
+    "ansi-escapes": "^5.0.0",
+    "boxen": "^6.2.1",
+    "chalk": "4",
+    "cli-columns": "^4.0.0",
+    "cli-truncate": "^3.1.0",
+    "commander": "^9.2.0",
+    "figures": "^4.0.1",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.4",
+    "load-json-file": "^6.2.0",
+    "lodash": "^4.17.21",
+    "mustache": "^4.2.0",
+    "normalize-path": "^3.0.0",
+    "ora": "^6.1.0",
+    "pretty-time": "^1.1.0",
+    "string-width": "^5.1.2",
+    "strip-ansi": "^7.0.1",
+    "widest-line": "^4.0.1",
+    "write-json-file": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^8.2.1",
+    "@types/jest": "^27.5.0",
+    "@types/lodash": "^4.14.182",
+    "@types/mustache": "^4.1.2",
+    "@types/node": "^17.0.31",
+    "@types/normalize-path": "^3.0.0",
+    "@types/pretty-time": "^1.1.2",
+    "@types/rimraf": "^3.0.2",
+    "execa": "^6.1.0",
+    "rimraf": "^3.0.2",
+    "syncpack": "^7.2.1",
+    "typesync": "^0.9.1"
+  },
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "types": "lib/index.d.ts"
+}

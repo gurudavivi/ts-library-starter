@@ -1,0 +1,48 @@
+{
+  "name": "@guru/fp",
+  "description": "@guru/fp",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": "https://github.com/gurudavivi/guru/packages/fp",
+  "homepage": "https://github.com/gurudavivi/guru/packages/fp#readme",
+  "bugs": "https://github.com/gurudavivi/guru/issues",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "!*.map"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=14.19"
+  },
+  "scripts": {
+    "_test": "jest",
+    "build": "tsc --build",
+    "clean": "rimraf node_modules lib coverage",
+    "compile": "tsc --build && pnpm run lint --fix",
+    "lint": "eslint src/**/*.ts test/**/*.ts",
+    "start": "tsc --watch",
+    "test": "pnpm run compile && pnpm run _test",
+    "test:cov": "jest --coverage"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.0",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^17.0.31",
+    "@types/rimraf": "^3.0.2",
+    "execa": "^6.1.0",
+    "rimraf": "^3.0.2",
+    "syncpack": "^7.2.1",
+    "typesync": "^0.9.1"
+  },
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "types": "lib/index.d.ts"
+}
