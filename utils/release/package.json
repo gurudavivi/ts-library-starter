@@ -17,6 +17,7 @@
         "commit": "cz"
     },
     "devDependencies": {
+        "auto-changelog": "^2.4.0",
         "release-it": "^15.0.0"
     }
 }

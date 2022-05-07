@@ -3,19 +3,23 @@
   "private": "true",
   "scripts": {
     "commit": "cz",
-    "fix": "pnpm run format && pnpm run lint",
+    "fix": "pnpm run format && syncpack format && syncpack list-mismatches && pnpm run lint",
     "format": "syncpack format && prettier --write **/src/**/*.ts",
     "lint": "syncpack list-mismatches && eslint **/src/**/*.ts --fix",
     "preinstall": "npx only-allow pnpm",
-    "release": "release-it --dry-run --verbose",
+    "release": "release-it --verbose -c ./utils/release/.release-it.js",
     "reset": "./scripts/reset.sh",
     "setup": "./setup",
-    "typesync": "pnpm exec typesync"
+    "typesync": "typesync"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "oao": "^2.0.2",
+    "prettier": "^2.6.2"
   },
   "devDependencies": {
     "@types/jest": "^27.5.0",
@@ -39,7 +43,5 @@
     "typescript": "^4.6.4",
     "typesync": "^0.9.1"
   },
-  "dependencies": {
-    "prettier": "^2.6.2"
-  }
+  "version": "0.0.1"
 }

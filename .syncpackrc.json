@@ -9,6 +9,8 @@
     "semverGroups": [],
     "semverRange": "",
     "sortAZ": [
+        "files",
+        "directories",
         "dependencies",
         "peerDependencies",
         "devDependencies",
