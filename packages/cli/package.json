@@ -19,7 +19,7 @@
   "scripts": {
     "_test": "jest --logHeapUsage",
     "commit": "cz",
-    "compile": "rimraf lib && tsc --build && pnpm run lint --fix",
+    "build": "rimraf lib && tsc --build && pnpm run lint --fix",
     "lint": "eslint src/**/*.ts test/**/*.ts",
     "start": "tsc --watch",
     "test": "pnpm run compile && pnpm run _test",
