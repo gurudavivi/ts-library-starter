@@ -26,6 +26,11 @@
     "test:cov": "jest --coverage",
     "test:watch": "jest --watch"
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@utils/tsconfig": "link:../../utils/tsconfig",
     "chalk": "^4.1.2",

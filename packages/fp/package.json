@@ -23,6 +23,11 @@
     "test:cov": "jest --coverage",
     "test:watch": "jest --watch"
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "lodash": "^4.17.21"
   },
