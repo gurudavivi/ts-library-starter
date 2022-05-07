@@ -15,10 +15,8 @@
   },
   "scripts": {
     "_test": "jest --logHeapUsage",
-    "build": "tsc --build",
-    "clean": "rimraf node_modules lib coverage",
     "commit": "cz",
-    "compile": "tsc --build && pnpm run lint --fix",
+    "compile": "rimraf lib &&  tsc --build && pnpm run lint --fix",
     "lint": "eslint src/**/*.ts test/**/*.ts",
     "start": "tsc --watch",
     "test": "pnpm run compile && pnpm run _test",

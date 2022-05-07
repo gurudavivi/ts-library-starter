@@ -12,5 +12,8 @@
     },
     "scripts": {
         "commit": "cz"
+    },
+    "dependencies": {
+        "rimraf": "^3.0.2"
     }
 }
