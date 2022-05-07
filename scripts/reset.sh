@@ -19,3 +19,7 @@ pnpm install
 # readme-md-generator
 
 # ln -sd ./node_modules/@types/lodash/common typed
+
+
+
+# npm-install-peers

@@ -1,9 +1,8 @@
 {
-  "name": "@guru/fp",
+  "name": "@workspace/cli",
   "version": "0.0.0",
-  "description": "@guru/fp",
-  "license": "private",
-  "private": "true",
+  "description": "workspace cli",
+  "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -11,8 +10,12 @@
     "!*.map"
   ],
   "directories": {
-    "test": "test"
+    "test": "test",
+    "bin": "bin"
   },
+  "repository": "https://github.com/gurudavivi/guru/packages/fp",
+  "homepage": "https://github.com/gurudavivi/guru/packages/fp#readme",
+  "bugs": "https://github.com/gurudavivi/guru/issues",
   "scripts": {
     "_test": "jest --logHeapUsage",
     "build": "tsc --build",
@@ -26,6 +29,9 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@utils/tsconfig": "link:../../utils/tsconfig",
+    "chalk": "^4.1.2",
+    "commander": "^9.2.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {

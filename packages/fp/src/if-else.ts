@@ -1,5 +1,4 @@
-import { eq, every, map } from 'lodash/fp';
-import { pipe } from 'lodash/fp';
+import { eq, every, map, pipe } from 'lodash/fp';
 
 import { PipeFunction, PredicateComparator } from './types';
 
@@ -12,7 +11,7 @@ import { PipeFunction, PredicateComparator } from './types';
  * @returns {(a: PipeFunction<T>) => (b: PipeFunction<T>) => (predicade: T) => T}
  */
 export function ifElse<T>(
-  ...args: PredicateComparator<T>[]
+  ...args: Array<PredicateComparator<T>>
 ): (a: PipeFunction<T>) => (b: PipeFunction<T>) => (predicade: T) => T {
   return (a: PipeFunction<T>) =>
     (b: PipeFunction<T>) =>

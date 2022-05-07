@@ -12,7 +12,7 @@ import { PipeFunction, PredicateComparator } from './types';
  * @returns {(a: PipeFunction<T>) => (predicade: T) => T}
  */
 export function ifThen<T>(
-  ...args: PredicateComparator<T>[]
+  ...args: Array<PredicateComparator<T>>
 ): (a: PipeFunction<T>) => (predicade: T) => T {
   return (a: PipeFunction<T>) =>
     (predicade: T): T => {
