@@ -1,0 +1,16 @@
+{
+    "name": "@utils/release",
+    "description": "release configuration",
+    "version": "0.0.0",
+    "author": "Viviane Florido @vivianeflowt",
+    "main": "index.js",
+    "license": "private",
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    "scripts": {
+        "commit": "cz"
+    }
+}

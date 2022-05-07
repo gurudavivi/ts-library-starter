@@ -13,12 +13,6 @@
         "sourceMap": true,
         "strict": true,
         "suppressImplicitAnyIndexErrors": true,
-        "target": "es2020",
-        "outDir": "lib",
-        "rootDir": "src"
-    },
-    "include": [
-        "src/**/*.ts",
-        "../../typings/**/*.d.ts"
-    ],
+        "target": "es2020"
+    }
 }
