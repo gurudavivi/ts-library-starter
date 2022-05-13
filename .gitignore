@@ -14,8 +14,11 @@ coverage
 .tmp
 _docpress
 
-lib
+temp
+tmp
+debug
 dist
+
 tsconfig.tsbuildinfo
 
 # Visual Studio Code configs
@@ -24,8 +27,9 @@ tsconfig.tsbuildinfo
 # JetBrains IDEs
 .idea/
 
-
+# Package manager lock
 package-lock.json
+yarn.lock
 
 __package_previews__
 .store
@@ -35,11 +39,9 @@ privatePackages/store
 ## Verdaccio storage
 storage
 
-yarn.lock
 
 RELEASE.md
 
 .jest-cache
 .turbo
 
-*.log

@@ -3,7 +3,6 @@
 
 clear
 
-
 rm -rf ./node_modules 2>/dev/null
 rm -rf ./dist 2>/dev/null
 rm -rf ./build 2>/dev/null
@@ -19,7 +18,5 @@ pnpm install
 # readme-md-generator
 
 # ln -sd ./node_modules/@types/lodash/common typed
-
-
 
 # npm-install-peers
