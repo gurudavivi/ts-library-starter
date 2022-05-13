@@ -41,6 +41,7 @@
         "engines",
         "scripts",
         "jest",
+        "prettier",
         "config",
         "peerDependencies",
         "dependencies",

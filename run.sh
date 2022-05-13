@@ -12,12 +12,11 @@ pnpm add -D jest @types/jest ts-jest
 
 pnpm add -D release-it auto-changelog 
 
-pnpm add -D commitizen cz-conventional-changelog 
+pnpm add -D commitizen cz-conventional-changelog lint-staged
 
 pnpm add -D syncpack  rimraf @types/rimraf @faker-js/faker 
 
 pnpm add -D typedoc
-
 
 
 pnpm add lodash
