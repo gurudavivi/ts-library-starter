@@ -1,6 +1,6 @@
 {
     "git": {
-        "requireBranch": "master",
+        "requireBranch": "main",
         "requireCleanWorkingDir": false,
         "commit": true,
         "tagAnnotation": "Release ${version}",
@@ -12,7 +12,7 @@
         "publish": false
     },
     "github": {
-        "release": false
+        "release": true
     },
     "hooks": {
         "after:bump": [
@@ -22,7 +22,10 @@
         "before:init": [
             "pnpm install",
             "pnpm run test",
-            "pnpm run fix"
-        ]
+            "pnpm run format",
+            "pnpm run lint"
+        ],
+        "after:git:release": "echo After git push, before github release",
+        "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
     }
 }
