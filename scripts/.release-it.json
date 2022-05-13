@@ -1,10 +1,10 @@
 {
     "git": {
-        "requireBranch": "main",
+        "requireBranch": "master",
         "requireCleanWorkingDir": false,
         "commit": true,
         "tagAnnotation": "Release ${version}",
-        "push": true,
+        "push": false,
         "commitMessage": "chore: release v${version}",
         "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"
     },
@@ -15,6 +15,7 @@
         "release": true
     },
     "hooks": {
+        "after:git:release": "git push origin HEAD",
         "after:bump": [
             "npm run build",
             "npx auto-changelog -p"
