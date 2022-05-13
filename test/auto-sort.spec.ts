@@ -1,5 +1,3 @@
-import 'expect-more-jest';
-
 import autoSort from '../src/auto-sort';
 
 test('autoSort', () => {

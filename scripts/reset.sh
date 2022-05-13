@@ -1,8 +1,6 @@
 
 #!/bin/bash
 
-clear
-
 rm -rf ./node_modules 2>/dev/null
 rm -rf ./dist 2>/dev/null
 rm -rf ./build 2>/dev/null

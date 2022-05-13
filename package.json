@@ -1,6 +1,6 @@
 {
-  "name": "tslib-starter",
-  "version": "0.0.1",
+  "name": "typescript-library-starter",
+  "version": "0.0.0",
   "description": "typescript library starter",
   "license": "private",
   "private": true,
@@ -14,19 +14,23 @@
     "test": "test",
     "dist": "dist"
   },
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
-    "build": "tsc --build --verbose --force",
+    "build": "rimraf dist && tsc --build --force",
     "commit": "cz",
     "fix": "pnpm run format && pnpm run lint:fix",
     "format": "syncpack format && prettier --write **/src/**/*.ts",
-    "lint": "eslint src/**/*.ts test/**/*.ts --ignore-pattern '!node_modules/*'",
-    "lint:fix": "pnpm run lint --fix",
+    "lint": "eslint src/**/*.ts test/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts test/**/*.ts --fix",
     "postinstall": "typesync",
+    "reset": "./scripts/reset.sh",
     "test": "jest --no-cache --logHeapUsage",
     "test:clear": "jest --clearCache",
     "test:cov": "jest --runInBand --coverage",
     "test:watch": "jest --runInBand --watch",
-    "watch": "tsc --watch"
+    "watch": "pnpm run build && tsc --watch"
   },
   "config": {
     "commitizen": {
@@ -34,7 +38,6 @@
     }
   },
   "dependencies": {
-    "cosmiconfig": "^7.0.1",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
@@ -57,7 +60,6 @@
     "eslint-plugin-jest": "^26.1.5",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "expect-more-jest": "^5.4.0",
     "jest": "^28.1.0",
     "prettier": "^2.6.2",
     "release-it": "^15.0.0",
@@ -70,8 +72,5 @@
     "type-fest": "^2.12.2",
     "typescript": "^4.6.4",
     "typesync": "^0.9.1"
-  },
-  "exports": {
-    ".": "./dist/index.js"
   }
 }
