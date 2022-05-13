@@ -5,7 +5,7 @@
  * @returns {string}
  */
 export function unaccented(str: string): string {
-  return str.normalize('NFD').replace(/\p{Diacritic}/gu, '');
+  return str.normalize('NFD').replace(/\p{Diacritic}/gu, '')
 }
 
-export default unaccented;
+export default unaccented

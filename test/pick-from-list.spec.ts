@@ -1,11 +1,11 @@
-import { pickFromList } from '../src';
+import { pickFromList } from '../src'
 
 describe('pickFromList', () => {
-  const array = [1, 2, 3, 4, 5];
+  const array = [1, 2, 3, 4, 5]
 
   test('should pass', () => {
-    const result = pickFromList(array);
+    const result = pickFromList(array)
 
-    expect(array).toContain(result);
-  });
-});
+    expect(array).toContain(result)
+  })
+})

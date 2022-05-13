@@ -1,7 +1,7 @@
-import { removeSpaces } from '../src';
+import { removeSpaces } from '../src'
 
-const str = '  test   text ';
+const str = '  test   text '
 
 test('removeSpaces', () => {
-  expect(removeSpaces(str)).toEqual('testtext');
-});
+  expect(removeSpaces(str)).toEqual('testtext')
+})

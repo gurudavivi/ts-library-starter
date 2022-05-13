@@ -1,6 +1,6 @@
-import { eq, every, map, pipe } from 'lodash/fp';
+import { eq, every, map, pipe } from 'lodash/fp'
 
-import { PipeFunction, PredicateComparator } from './types';
+import { PipeFunction, PredicateComparator } from './types'
 
 /**
  * If all comparators against the predicate are true execute function A
@@ -18,11 +18,11 @@ export function ifElse<T>(
     (predicade: T): T => {
       return pipe(
         map((cond: PredicateComparator<T>) => cond(predicade)),
-        every(eq(true)),
+        every(eq(true))
       )(args)
         ? a(predicade)
-        : b(predicade);
-    };
+        : b(predicade)
+    }
 }
 
-export default ifElse;
+export default ifElse

@@ -1,4 +1,4 @@
-import { entries, indexOf, isUndefined, map, pipe, reduce } from 'lodash/fp';
+import { entries, indexOf, isUndefined, map, pipe, reduce } from 'lodash/fp'
 
 /**
  *  Rename object keys
@@ -20,8 +20,8 @@ export function renameKeys<T extends Object>(
             : key,
           value,
         ]),
-        reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {}),
-      )({ ...obj });
+        reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})
+      )({ ...obj })
 }
 
-export default renameKeys;
+export default renameKeys

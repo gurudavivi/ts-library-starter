@@ -1,4 +1,4 @@
-import { List } from './types';
+import { List } from './types'
 
 /**
  * Randomly shuffles the elements of a list
@@ -11,7 +11,7 @@ export function shuffleList<T>(list: List<T>): T[] {
   return [...list]
     .map((item) => ({ item, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
-    .map(({ item }) => item);
+    .map(({ item }) => item)
 }
 
-export default shuffleList;
+export default shuffleList

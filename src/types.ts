@@ -1,11 +1,11 @@
-export type IndexComparator<T> = (a: T, b: T) => number;
+export type IndexComparator<T> = (a: T, b: T) => number
 
-export type PredicateComparator<T> = (a: T) => boolean;
+export type PredicateComparator<T> = (a: T) => boolean
 export interface PipeFunction<T, R = any> {
-  (a: T): T;
-  (a: T): R;
+  (a: T): T
+  (a: T): R
 }
-export type List<T> = readonly T[];
+export type List<T> = readonly T[]
 
 // type List<T> = ReadonlyArray<T>;
 

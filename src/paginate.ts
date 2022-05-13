@@ -1,6 +1,6 @@
-import { multiply, pipe, slice } from 'lodash/fp';
+import { multiply, pipe, slice } from 'lodash/fp'
 
-import { List } from './types';
+import { List } from './types'
 
 /**
  * Returns a paginated part of a listing
@@ -10,10 +10,10 @@ import { List } from './types';
  * @returns {(offset: number) => (list: any) => any}
  */
 export function paginate<T>(
-  size: number,
+  size: number
 ): (offset: number) => (list: List<T>) => T[] {
   return (offset: number) => (list: List<T>) =>
-    pipe(slice(multiply(size)(offset - 1), multiply(offset)(size)))([...list]);
+    pipe(slice(multiply(size)(offset - 1), multiply(offset)(size)))([...list])
 }
 
-export default paginate;
+export default paginate

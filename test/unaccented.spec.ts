@@ -1,5 +1,5 @@
-import { unaccented } from '../src';
+import { unaccented } from '../src'
 
 test('unaccented', () => {
-  expect(unaccented('Ábôà')).toEqual('Aboa');
-});
+  expect(unaccented('Ábôà')).toEqual('Aboa')
+})

@@ -1,6 +1,6 @@
-import { slice } from 'lodash/fp';
+import { slice } from 'lodash/fp'
 
-import { List } from './types';
+import { List } from './types'
 
 /**
  * Limit the size of an array
@@ -10,7 +10,7 @@ import { List } from './types';
  * @returns {(list: any) => any}
  */
 export function limit<T>(count: number): (list: List<T>) => T[] {
-  return (list: List<T>) => slice(0)(Math.abs(count))([...list]);
+  return (list: List<T>) => slice(0)(Math.abs(count))([...list])
 }
 
-export default limit;
+export default limit

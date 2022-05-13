@@ -1,6 +1,6 @@
-import { splitByWord } from '../src';
+import { splitByWord } from '../src'
 
-const str = 'Aatches even if Received contains Additional Elements';
+const str = 'Aatches even if Received contains Additional Elements'
 
 test('splitByWord', () => {
   expect(splitByWord(str)).toEqual([
@@ -11,5 +11,5 @@ test('splitByWord', () => {
     'contains',
     'Additional',
     'Elements',
-  ]);
-});
+  ])
+})

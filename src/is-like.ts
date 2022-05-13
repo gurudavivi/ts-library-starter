@@ -1,4 +1,4 @@
-import { eq, toString } from 'lodash/fp';
+import { eq, toString } from 'lodash/fp'
 
 /**
  * Compares if one value is similar to another even if of different types
@@ -10,8 +10,8 @@ import { eq, toString } from 'lodash/fp';
  */
 export function isLike<A, B>(a: A): (b: B) => boolean {
   return (b: B): boolean => {
-    return eq(toString(a))(toString(b));
-  };
+    return eq(toString(a))(toString(b))
+  }
 }
 
-export default isLike;
+export default isLike

@@ -1,4 +1,4 @@
-import { join, pipe, reverse, split } from 'lodash/fp';
+import { join, pipe, reverse, split } from 'lodash/fp'
 
 /**
  * Reverse string
@@ -7,7 +7,7 @@ import { join, pipe, reverse, split } from 'lodash/fp';
  * @returns {string}
  */
 export function reverseStr(str: string): string {
-  return pipe(split(''), reverse, join(''))(str);
+  return pipe(split(''), reverse, join(''))(str)
 }
 
-export default reverseStr;
+export default reverseStr

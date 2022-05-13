@@ -1,6 +1,6 @@
-import { pipe, reduce, reverse, values } from 'lodash/fp';
+import { pipe, reduce, reverse, values } from 'lodash/fp'
 
-import { List } from './types';
+import { List } from './types'
 
 /**
  * Selects unique objects in a list based on a certain key
@@ -10,14 +10,14 @@ import { List } from './types';
  * @returns {(list: any) => any}
  */
 export function uniqueByKey<T extends Object>(
-  predicate: string,
+  predicate: string
 ): (list: List<T>) => T[] {
   return (list: List<T>) =>
     pipe(
       reverse,
       reduce((acc, cur) => ({ ...acc, [cur[predicate]]: cur }), {}),
-      values,
-    )([...list]);
+      values
+    )([...list])
 }
 
-export default uniqueByKey;
+export default uniqueByKey

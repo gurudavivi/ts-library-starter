@@ -1,4 +1,4 @@
-import { uniqueByKey } from '../src';
+import { uniqueByKey } from '../src'
 
 const array = [
   { name: 'Patricia', color: 'azure' },
@@ -6,7 +6,7 @@ const array = [
   { name: 'Giovanna', color: 'purple' },
   { name: 'Patricia', color: 'lavender' },
   { name: 'Lawrence', color: 'yellow' },
-];
+]
 
 test('uniqueByKey', () => {
   expect(uniqueByKey('name')(array)).toEqual(
@@ -15,6 +15,6 @@ test('uniqueByKey', () => {
       { name: 'Brook', color: 'yellow' },
       { name: 'Giovanna', color: 'purple' },
       { name: 'Lawrence', color: 'yellow' },
-    ]),
-  );
-});
+    ])
+  )
+})

@@ -1,5 +1,5 @@
-import { reverseStr } from '../src';
+import { reverseStr } from '../src'
 
 test('reverseStr', () => {
-  expect(reverseStr('abcde')).toEqual('edcba');
-});
+  expect(reverseStr('abcde')).toEqual('edcba')
+})

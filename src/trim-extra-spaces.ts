@@ -5,7 +5,7 @@
  * @returns {string}
  */
 export function trimExtraSpaces(str: string): string {
-  return str.replace(/(\s{2,})/g, ' ').trim();
+  return str.replace(/(\s{2,})/g, ' ').trim()
 }
 
-export default trimExtraSpaces;
+export default trimExtraSpaces

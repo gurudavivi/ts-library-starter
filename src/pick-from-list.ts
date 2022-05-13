@@ -1,4 +1,4 @@
-import { List } from './types';
+import { List } from './types'
 
 /**
  * Select a random element from the list
@@ -8,7 +8,7 @@ import { List } from './types';
  * @returns {*}
  */
 export function pickFromList<T>(list: List<T>): T {
-  return [...list][Math.floor(Math.random() * (list.length - 1))];
+  return [...list][Math.floor(Math.random() * (list.length - 1))]
 }
 
-export default pickFromList;
+export default pickFromList
